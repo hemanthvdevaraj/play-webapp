@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition"
+		template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/view/layouts/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="homepage" extends="base.definition">
+		<put-attribute name="title" value="Play App Home" />
+		<put-attribute name="body" value="/WEB-INF/view/homepage.jsp" />
+	</definition>
+
+	<definition name="userdetails" extends="base.definition">
+		<put-attribute name="title" value="Play App Users" />
+		<put-attribute name="body" value="/WEB-INF/view/userdetails.jsp" />
+	</definition>
+	
+	<definition name="administration" extends="base.definition">
+		<put-attribute name="title" value="Administration" />
+		<put-attribute name="menu" value="/WEB-INF/view/adminmenu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/view/admin.jsp" />
+	</definition>
+
+</tiles-definitions>
